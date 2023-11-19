@@ -5,8 +5,6 @@
 # include <iostream>
 using namespace std;
 
-using namespace std;
-
 int main() {
     //this program determines whether a certain year is a leap year or not
 

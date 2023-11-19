@@ -3,17 +3,18 @@ project(com_122)
 
 set(CMAKE_CXX_STANDARD 17)
 
-# lab 01
-add_executable(p01 lab01/p02.cpp)
-add_executable(p02 lab01/p02.cpp)
-add_executable(p03 lab01/p03.cpp)
-add_executable(p04 lab01/p04.cpp)
-add_executable(p05 lab01/p05.cpp)
-add_executable(p06 lab01/p06.cpp)
-add_executable(p07 lab01/p07.cpp)
-add_executable(p08 lab01/p08.cpp)
-add_executable(p09 lab01/p09.cpp)
-add_executable(p10 lab01/p10.cpp)
+
+# lab 03
+add_executable(lab03-p01 lab03/p01.cpp)
+add_executable(lab03-p02 lab03/p02.cpp)
+add_executable(lab03-p03 lab03/p03.cpp)
+add_executable(lab03-p04 lab03/p04.cpp)
+add_executable(lab03-p05 lab03/p05.cpp)
+add_executable(lab03-p06 lab03/p06.cpp)
+add_executable(lab03-p07 lab03/p07.cpp)
+add_executable(lab03-p08 lab03/p08.cpp)
+add_executable(lab03-p09 lab03/p09.cpp)
+add_executable(lab03-p10 lab03/p10.cpp)
 
 # lab 02
 add_executable(lab02-p01 lab02/p01.cpp)
@@ -26,6 +27,20 @@ add_executable(lab02-p07 lab02/p07.cpp)
 add_executable(lab02-p08 lab02/p08.cpp)
 add_executable(lab02-p09 lab02/p09.cpp)
 add_executable(lab02-p10 lab02/p10.cpp)
+
+# lab 01
+add_executable(lab01-p01 lab01/p02.cpp)
+add_executable(lab01-p02 lab01/p02.cpp)
+add_executable(lab01-p03 lab01/p03.cpp)
+add_executable(lab01-p04 lab01/p04.cpp)
+add_executable(lab01-p05 lab01/p05.cpp)
+add_executable(lab01-p06 lab01/p06.cpp)
+add_executable(lab01-p07 lab01/p07.cpp)
+add_executable(lab01-p08 lab01/p08.cpp)
+add_executable(lab01-p09 lab01/p09.cpp)
+add_executable(lab01-p10 lab01/p10.cpp)
+
+
 
 # becrowd problems
 add_executable(p1000 ojmid/p1000.cpp)
@@ -57,13 +72,23 @@ add_executable(p1038 ojmid/p1038.cpp)
 add_executable(p1040 ojmid/p1040.cpp)
 add_executable(p1041 ojmid/p1041.cpp)
 add_executable(p1042 ojmid/p1042.cpp)
+add_executable(p1043 ojmid/p1043.cpp)
+add_executable(p1044 ojmid/p1044.cpp)
+add_executable(p1045 ojmid/p1045.cpp)
+add_executable(p1046 ojmid/p1046.cpp)
 
-# lab 03
-add_executable(lab03-p01 lab03/p01.cpp)
-add_executable(lab03-p02 lab03/p02.cpp)
-add_executable(lab03-p03 lab03/p03.cpp)
-add_executable(lab03-p04 lab03/p04.cpp)
-add_executable(lab03-p05 lab03/p05.cpp)
-add_executable(lab03-p06 lab03/p06.cpp)
-add_executable(lab03-p07 lab03/p07.cpp)
-add_executable(lab03-p08 lab03/p08.cpp)
+# lab 04
+add_executable(lab04-01 lab04/p01.cpp)
+add_executable(lab04-02 lab04/p02.cpp)
+add_executable(lab04-03 lab04/p03.cpp)
+add_executable(lab04-04 lab04/p04.cpp)
+add_executable(lab04-05 lab04/p05.cpp)
+add_executable(lab04-06 lab04/p06.cpp)
+add_executable(lab04-07 lab04/p07.cpp)
+add_executable(lab04-08 lab04/p08.cpp)
+add_executable(lab04-09 lab04/p09.cpp)
+add_executable(lab04-10 lab04/p10.cpp)
+
+# lab 05
+add_executable(lab05-01 lab05/p01.cpp)
+add_executable(lab05-02 lab05/p02.cpp)

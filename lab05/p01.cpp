@@ -1,5 +1,5 @@
 //
-// Created by Lena on 19.11.2023.
+// Created by Alex on 19.11.2023.
 //
 
 
@@ -14,10 +14,10 @@ int main() {
     //
     //Use the do...while loop in this task.
 
-    list<int> grades_list;
+    //list<int> grades_list; // I will not use lists here
     int grade, sum, counter;
 
-    //counter = 0;
+    counter = 0;
     sum = 0;
 
     do {
@@ -25,19 +25,21 @@ int main() {
         cin >> grade;
 
         sum += grade;
-        //counter += 1;
-        grades_list.push_front(grade);
+        counter += 1;
+        //grades_list.push_front(grade);
 
     } while (grade > 0);
 
-    if (sum == 0 && grades_list.size() == 1){
+    if (sum == 0 && counter == 1) { //grades_list.size() == 1
         printf("Nothing to calculate");
     }
     else
     {
-        printf("The arithmetic mean is %.1f", float (sum) /(grades_list.size()-1)); // (counter-1)
+        printf("The arithmetic mean is %.1f", float (sum) /(counter-1)); // grades_list.size()-1)
     }
 
+    return 0;
+}
 
 //    cout << endl << "Final List: ";
 //    for(int i : grades_list) {
@@ -49,7 +51,6 @@ int main() {
     //printf("res: %.2d",14.0/4);
 
 
-
 //    if (grades_list.size() > 0)
 //    {
 //        printf("The arithmetic mean is %1.1f", sum/grades_list.size());
@@ -58,5 +59,4 @@ int main() {
 
 
 
-    return 0;
-}
+

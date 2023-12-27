@@ -2,31 +2,7 @@ cmake_minimum_required(VERSION 3.26)
 project(com_122)
 
 set(CMAKE_CXX_STANDARD 17)
-
-
-# lab 03
-add_executable(lab03-p01 lab03/p01.cpp)
-add_executable(lab03-p02 lab03/p02.cpp)
-add_executable(lab03-p03 lab03/p03.cpp)
-add_executable(lab03-p04 lab03/p04.cpp)
-add_executable(lab03-p05 lab03/p05.cpp)
-add_executable(lab03-p06 lab03/p06.cpp)
-add_executable(lab03-p07 lab03/p07.cpp)
-add_executable(lab03-p08 lab03/p08.cpp)
-add_executable(lab03-p09 lab03/p09.cpp)
-add_executable(lab03-p10 lab03/p10.cpp)
-
-# lab 02
-add_executable(lab02-p01 lab02/p01.cpp)
-add_executable(lab02-p02 lab02/p02.cpp)
-add_executable(lab02-p03 lab02/p03.cpp)
-add_executable(lab02-p04 lab02/p04.cpp)
-add_executable(lab02-p05 lab02/p05.cpp)
-add_executable(lab02-p06 lab02/p06.cpp)
-add_executable(lab02-p07 lab02/p07.cpp)
-add_executable(lab02-p08 lab02/p08.cpp)
-add_executable(lab02-p09 lab02/p09.cpp)
-add_executable(lab02-p10 lab02/p10.cpp)
+find_package(raylib CONFIG REQUIRED)
 
 # lab 01
 add_executable(lab01-p01 lab01/p02.cpp)
@@ -40,6 +16,98 @@ add_executable(lab01-p08 lab01/p08.cpp)
 add_executable(lab01-p09 lab01/p09.cpp)
 add_executable(lab01-p10 lab01/p10.cpp)
 
+# lab 02
+add_executable(lab02-p01 lab02/p01.cpp)
+add_executable(lab02-p02 lab02/p02.cpp)
+add_executable(lab02-p03 lab02/p03.cpp)
+add_executable(lab02-p04 lab02/p04.cpp)
+add_executable(lab02-p05 lab02/p05.cpp)
+add_executable(lab02-p06 lab02/p06.cpp)
+add_executable(lab02-p07 lab02/p07.cpp)
+add_executable(lab02-p08 lab02/p08.cpp)
+add_executable(lab02-p09 lab02/p09.cpp)
+add_executable(lab02-p10 lab02/p10.cpp)
+
+# lab 03
+add_executable(lab03-p01 lab03/p01.cpp)
+add_executable(lab03-p02 lab03/p02.cpp)
+add_executable(lab03-p03 lab03/p03.cpp)
+add_executable(lab03-p04 lab03/p04.cpp)
+add_executable(lab03-p05 lab03/p05.cpp)
+add_executable(lab03-p06 lab03/p06.cpp)
+add_executable(lab03-p07 lab03/p07.cpp)
+add_executable(lab03-p08 lab03/p08.cpp)
+add_executable(lab03-p09 lab03/p09.cpp)
+add_executable(lab03-p10 lab03/p10.cpp)
+
+# lab 04
+add_executable(lab04-01 lab04/p01.cpp)
+add_executable(lab04-02 lab04/p02.cpp)
+add_executable(lab04-03 lab04/p03.cpp)
+add_executable(lab04-04 lab04/p04.cpp)
+add_executable(lab04-05 lab04/p05.cpp)
+add_executable(lab04-06 lab04/p06.cpp)
+add_executable(lab04-07 lab04/p07.cpp)
+add_executable(lab04-08 lab04/p08.cpp)
+add_executable(lab04-09 lab04/p09.cpp)
+add_executable(lab04-10 lab04/p10.cpp)
+
+# lab05
+add_executable(lab05-01 lab05/p01.cpp)
+add_executable(lab05-02 lab05/p02.cpp)
+add_executable(lab05-03 lab05/p03.cpp)
+add_executable(lab05-04 lab05/p04.cpp)
+target_link_libraries(lab05-04 PRIVATE raylib)
+add_executable(lab05-05 lab05/p05.cpp)
+target_link_libraries(lab05-05 PRIVATE raylib)
+add_executable(lab05-06 lab05/p06.cpp)
+add_executable(lab05-07 lab05/p07.cpp)
+add_executable(lab05-08 lab05/p08.cpp)
+add_executable(lab05-09 lab05/p09.cpp)
+add_executable(lab05-10 lab05/p10.cpp)
+
+# lab06
+add_executable(lab06-03 lab06/p03.cpp)
+target_link_libraries(lab06-03 PRIVATE raylib)
+add_executable(lab06-01 lab06/p01.cpp)
+add_executable(lab06-02 lab06/p02.cpp)
+add_executable(lab06-04 lab06/p04.cpp)
+add_executable(lab06-05 lab06/p05.cpp)
+add_executable(lab06-06 lab06/p06.cpp)
+add_executable(lab06-07 lab06/p07.cpp)
+add_executable(lab06-08 lab06/p08.cpp)
+add_executable(lab06-09 lab06/p09.cpp)
+add_executable(lab06-10 lab06/p10.cpp)
+
+# lab07
+add_executable(lab07-01 lab07/p01.cpp)
+add_executable(lab07-02 lab07/p02.cpp)
+add_executable(lab07-03 lab07/p03.cpp)
+add_executable(lab07-04 lab07/p04.cpp)
+add_executable(lab07-05 lab07/p05.cpp)
+target_link_libraries(lab07-05 PRIVATE raylib)
+add_executable(lab07-06 lab07/p06.cpp)
+
+# lab08
+add_executable(lab08-01 lab08/p01.cpp)
+add_executable(lab08-02 lab08/p02.cpp)
+add_executable(lab08-03 lab08/p03.cpp)
+add_executable(lab08-04 lab08/p04.cpp)
+add_executable(lab08-05 lab08/p05.cpp)
+
+# projects
+add_executable(dungeon
+        "${PROJECT_SOURCE_DIR}"projects/dungeon.cpp
+        projects/globals.h
+        projects/graphics.h
+        projects/images.h
+        projects/utilities.h
+        projects/levels.h
+        projects/player.h
+        projects/sound.h
+)
+
+target_link_libraries(dungeon PRIVATE raylib)
 
 
 # becrowd problems
@@ -76,19 +144,37 @@ add_executable(p1043 ojmid/p1043.cpp)
 add_executable(p1044 ojmid/p1044.cpp)
 add_executable(p1045 ojmid/p1045.cpp)
 add_executable(p1046 ojmid/p1046.cpp)
-
-# lab 04
-add_executable(lab04-01 lab04/p01.cpp)
-add_executable(lab04-02 lab04/p02.cpp)
-add_executable(lab04-03 lab04/p03.cpp)
-add_executable(lab04-04 lab04/p04.cpp)
-add_executable(lab04-05 lab04/p05.cpp)
-add_executable(lab04-06 lab04/p06.cpp)
-add_executable(lab04-07 lab04/p07.cpp)
-add_executable(lab04-08 lab04/p08.cpp)
-add_executable(lab04-09 lab04/p09.cpp)
-add_executable(lab04-10 lab04/p10.cpp)
-
-# lab 05
-add_executable(lab05-01 lab05/p01.cpp)
-add_executable(lab05-02 lab05/p02.cpp)
+add_executable(p1047 ojmid/p1047.cpp)
+add_executable(p1048 ojmid/p1048.cpp)
+add_executable(p1049 ojmid/p1049.cpp)
+add_executable(p1050 ojmid/p1050.cpp)
+add_executable(p1051 ojmid/p1051.cpp)
+add_executable(p1052 ojmid/p1052.cpp)
+add_executable(p1059 ojmid/p1059.cpp)
+add_executable(p1061 ojmid/p1061.cpp)
+add_executable(p1060 ojmid/p1060.cpp)
+add_executable(p1064 ojmid/p1064.cpp)
+add_executable(p1065 ojmid/p1065.cpp)
+add_executable(p1066 ojmid/p1066.cpp)
+add_executable(p1067 ojmid/p1067.cpp)
+add_executable(p1070 ojmid/p1070.cpp)
+add_executable(p1071 ojmid/p1071.cpp)
+add_executable(p1172 ojmid/p1172.cpp)
+add_executable(p1173 ojmid/p1173.cpp)
+add_executable(p1174 ojmid/p1174.cpp)
+add_executable(p1175 ojmid/p1175.cpp)
+add_executable(p1177 ojmid/p1177.cpp)
+add_executable(p1178 ojmid/p1178.cpp)
+add_executable(p1179 ojmid/p1179.cpp)
+add_executable(p1180 ojmid/p1180.cpp)
+add_executable(1181 ojmid/p1181.cpp)
+add_executable(1082 ojmid/p1182.cpp)
+add_executable(1183 ojmid/p1183.cpp)
+add_executable(1184 ojmid/p1184.cpp)
+add_executable(1185 ojmid/p1185.cpp)
+add_executable(1186 ojmid/p1186.cpp)
+add_executable(1187 ojmid/p1187.cpp)
+add_executable(1188 ojmid/p1188.cpp)
+add_executable(1189 ojmid/p1189.cpp)
+add_executable(1190 ojmid/p1190.cpp)
+add_executable(1435 ojmid/p1435.cpp)
